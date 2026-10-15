@@ -17,4 +17,4 @@ Images and the resume PDF are in `public/`.
 ## Deploy
 
 Every push to `main` builds and deploys automatically via GitHub Actions
-(`.github/workflows/deploy.yml`) to https://bakhoon.github.io
+(`.github/workflows/deploy.yml`) to https://bakhoon.github.io/portfolio/
