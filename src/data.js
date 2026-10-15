@@ -44,19 +44,6 @@ export const experience = {
 
 export const projects = [
   {
-    name: 'Live Korean → English Subtitles',
-    fullName: 'Real-Time Korean → English Subtitle System',
-    dates: 'Sep 2025 to Jun 2026',
-    summary:
-      'A speech translation system that turns Korean sermons into live English subtitles at Jesuwon Church.',
-    bullets: [
-      'Built a Node.js backend that captures live sermon audio, transcribes it with Whisper STT, and translates it with LangChain-based LLM workflows',
-      'Developed a real-time subtitle UI that shows sentence-level translations on screen, in sync with the speaker',
-      'Ran it during weekly services and cut subtitle delay by processing shorter audio chunks, based on feedback from the congregation',
-    ],
-    stack: ['Node.js', 'Whisper STT', 'LangChain', 'LLM'],
-  },
-  {
     name: '예수원 Church Homepage',
     fullName: '예수원 Church Homepage',
     dates: 'Feb 2024 to Now',
