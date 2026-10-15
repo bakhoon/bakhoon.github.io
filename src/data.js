@@ -46,14 +46,7 @@ export const projects = [
   {
     name: '예수원 Church Homepage',
     fullName: '예수원 Church Homepage',
-    dates: 'Feb 2024 to Now',
-    summary:
-      'A long-term project to modernize and self-host the church website, moving from an externally hosted PHP/HTML site to React.',
-    bullets: [
-      'Debugged layout, script, and rendering issues in the legacy site with Chrome DevTools, documenting root causes and coordinating fixes with outside developers',
-      'Moving frontend components to React with SCSS-based responsive layouts',
-    ],
-    stack: ['React', 'SCSS', 'PHP / HTML', 'Chrome DevTools'],
+    comingSoon: true,
   },
   {
     name: 'Writer Blog',
