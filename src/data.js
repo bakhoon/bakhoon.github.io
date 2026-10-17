@@ -44,8 +44,8 @@ export const experience = {
 
 export const projects = [
   {
-    name: '한eng AI Record',
-    fullName: '한eng AI Record',
+    name: 'Han-Eng AI Record',
+    fullName: 'Han-Eng AI Record',
     dates: 'Jul 2026 to Now',
     tagline: 'Live Korean + English captions with AI summaries',
     link: 'https://bakhoon.github.io/ai-audio-capture/',
@@ -60,8 +60,8 @@ export const projects = [
     stack: ['React', 'JavaScript', 'Vite', 'Soniox STT', 'Claude API', 'Google Drive API', 'GitHub Actions'],
   },
   {
-    name: '예수원 Church Homepage',
-    fullName: '예수원 Church Homepage',
+    name: 'Jesuwon Church Homepage',
+    fullName: 'Jesuwon Church Homepage',
     comingSoon: true,
   },
   {
@@ -73,8 +73,8 @@ export const projects = [
 
 export const smallProjects = [
   {
-    name: '큰 글씨 성경',
-    fullName: '큰 글씨 성경 · Large-Print Bible',
+    name: 'Large-Print Bible',
+    fullName: 'Large-Print Bible',
     tagline: 'Large-print Bible app for people with low vision',
     link: 'https://bakhoon.github.io/huge-bible/',
     linkLabel: 'Open app ↗',
@@ -90,8 +90,8 @@ export const smallProjects = [
   },
   {
     name: 'Crayon Ladder Game',
-    fullName: 'Crayon Ladder Game · 사다리타기',
-    tagline: '사다리타기 you draw yourself, crayon style',
+    fullName: 'Crayon Ladder Game',
+    tagline: 'A ladder luck game you draw yourself, crayon style',
     link: 'https://bakhoon.github.io/ladder-luck-game/',
     linkLabel: 'Play ↗',
     summary: 'A ladder luck game with a crayon look, where you draw the ladder yourself.',

@@ -118,19 +118,27 @@ export function ProjectsCard() {
     <article className="card tint-green wobble-c">
       <CardTitle num="03">Projects</CardTitle>
       <div className="proj-list">
-        {projects.map((p, i) => (
-          <div key={p.name} className={`proj ${p.comingSoon ? 'proj-soon' : 'proj-main'} ${i % 2 ? 'wobble-sm-b' : 'wobble-sm'}`}>
-            <span className="proj-row">
-              <span className="proj-name">{p.name}</span>
-              {!p.comingSoon && <span className="proj-date">{p.dates}</span>}
-            </span>
-            {p.comingSoon ? (
-              <span className="proj-date">Coming soon</span>
-            ) : (
+        {projects.map((p, i) => {
+          const shape = i % 2 ? 'wobble-sm-b' : 'wobble-sm'
+          if (p.comingSoon) {
+            return (
+              <div key={p.name} className={`proj proj-soon ${shape}`}>
+                <span className="proj-name">{p.name}</span>
+                <span className="proj-date">Coming soon</span>
+              </div>
+            )
+          }
+          return (
+            <a key={p.name} className={`proj proj-main small-proj ${shape}`} href={p.link} target="_blank" rel="noopener noreferrer">
+              <span className="proj-row">
+                <span className="proj-name">{p.name}</span>
+                <span className="open-mini">Open ↗</span>
+              </span>
               <span className="proj-tagline">{p.tagline}</span>
-            )}
-          </div>
-        ))}
+              <span className="proj-date">{p.dates}</span>
+            </a>
+          )
+        })}
       </div>
       <ReadMore onClick={() => setOpen(true)} />
 
