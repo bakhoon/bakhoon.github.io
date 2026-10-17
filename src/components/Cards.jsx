@@ -123,8 +123,10 @@ export function ProjectsCard() {
           if (p.comingSoon) {
             return (
               <div key={p.name} className={`proj proj-soon ${shape}`}>
-                <span className="proj-name">{p.name}</span>
-                <span className="proj-date">Coming soon</span>
+                <span className="proj-row">
+                  <span className="proj-name">{p.name}</span>
+                  <span className="proj-date">Coming soon</span>
+                </span>
               </div>
             )
           }
@@ -135,7 +137,6 @@ export function ProjectsCard() {
                 <span className="open-mini">Open ↗</span>
               </span>
               <span className="proj-tagline">{p.tagline}</span>
-              <span className="proj-date">{p.dates}</span>
             </a>
           )
         })}

@@ -60,6 +60,22 @@ export const projects = [
     stack: ['React', 'JavaScript', 'Vite', 'Soniox STT', 'Claude API', 'Google Drive API', 'GitHub Actions'],
   },
   {
+    name: 'Planning',
+    fullName: 'Planning',
+    dates: 'Oct 2026',
+    tagline: 'Personal planner with Google sign-in and Firestore',
+    link: 'https://bakhoon.github.io/planning/',
+    summary:
+      'A clean, work-style planner for dates and to-dos. Only emails I approve can sign in, and that rule is enforced on the server.',
+    bullets: [
+      'Google sign-in with an email allowlist, enforced server-side by Firestore security rules',
+      'Week strip, date picker, and daily progress; add, edit, and check off Tasks, Meetings, Deadlines, and Notes',
+      'Owner-only settings to manage allowed emails and export a JSON backup',
+      'Offline cache that syncs when back online; deploys to GitHub Pages with GitHub Actions',
+    ],
+    stack: ['React', 'JavaScript', 'Vite', 'Firebase Auth', 'Firestore', 'GitHub Actions'],
+  },
+  {
     name: 'Jesuwon Church Homepage',
     fullName: 'Jesuwon Church Homepage',
     comingSoon: true,
