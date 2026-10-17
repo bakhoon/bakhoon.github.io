@@ -62,7 +62,7 @@ export const projects = [
   {
     name: 'Planning',
     fullName: 'Planning',
-    dates: 'Oct 2026',
+    dates: 'Apr 2026 to Now',
     tagline: 'Security-first planner with Google sign-in and Firestore',
     link: 'https://bakhoon.github.io/planning/',
     summary:
