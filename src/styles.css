@@ -302,7 +302,8 @@ button { font: inherit; color: inherit; }
 .small-proj { color: var(--ink); text-decoration: none; gap: 5px; transition: transform 0.15s ease; }
 .small-proj:hover { color: var(--ink); transform: translate(-1px, -2px); }
 .open-mini { font-family: var(--hand); font-weight: 700; font-size: 16px; color: var(--accent-ink); white-space: nowrap; }
-.chips.mini { gap: 5px; }
+.chips.mini { gap: 5px; display: none; }
+@media (max-width: 1100px), (max-height: 740px) { .chips.mini { display: flex; } }
 .chip-xs { border-width: 1.5px; padding: 1px 9px; font-size: 12px; }
 .read-more.ink { color: var(--ink); }
 .read-more.ink span { border-bottom-color: var(--ink); }

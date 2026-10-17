@@ -121,6 +121,22 @@ export const smallProjects = [
     langs: ['React', 'JavaScript', 'Vite'],
     stack: ['React', 'JavaScript', 'Vite', 'GitHub Actions'],
   },
+  {
+    name: 'Math Game',
+    fullName: 'Math Game',
+    tagline: 'Timed mental math game in soft pastels',
+    link: 'https://bakhoon.github.io/math-game/',
+    linkLabel: 'Play ↗',
+    summary: 'A phone-friendly mental math game. Solve as many problems as you can before time runs out.',
+    bullets: [
+      'Pick the operations (+ − × ÷), 2 to 6 answer buttons, and a time limit',
+      'A wrong answer costs 1 second, and you stay on the problem until you get it right',
+      'Soft pastel design made for phones',
+      'Builds and deploys to GitHub Pages with GitHub Actions',
+    ],
+    langs: ['React', 'JavaScript', 'Vite'],
+    stack: ['React', 'JavaScript', 'Vite', 'GitHub Actions'],
+  },
 ]
 
 export const skills = [

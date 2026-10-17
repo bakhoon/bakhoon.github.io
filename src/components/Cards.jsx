@@ -212,7 +212,7 @@ export function SmallProjectsCard() {
   const [open, setOpen] = useState(false)
   return (
     <article className="card tint-green wobble-a">
-      <CardTitle num="04" plain>Small Projects</CardTitle>
+      <CardTitle num="04">Small Projects</CardTitle>
       <div className="proj-list">
         {smallProjects.map((p, i) => (
           <a
@@ -243,7 +243,7 @@ export function SmallProjectsCard() {
         <div className="modal-head">
           <span className="card-num">04 · Small Projects</span>
           <h2 id="small-title" className="hl modal-h">Small Projects</h2>
-          <p className="muted-p">Quick apps I built for people around me. Both are live, so give them a try.</p>
+          <p className="muted-p">Quick apps I built for myself and the people around me. All of them are live, so give them a try.</p>
         </div>
         {smallProjects.map((p) => (
           <section key={p.name} className="modal-sec ruled">
