@@ -167,7 +167,7 @@ export function ProjectsCard() {
                 <p className="muted-p">{p.summary}</p>
                 <ul className="bullets">
                   {p.bullets.map((b) => (
-                    <li key={b}>{b}</li>
+                    <Html as="li" key={b} html={b} />
                   ))}
                 </ul>
                 <Chips items={p.stack} small />
