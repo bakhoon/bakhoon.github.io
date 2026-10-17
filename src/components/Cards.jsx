@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { about, experience, projects, skills, photos, links } from '../data'
+import { about, experience, projects, smallProjects, skills, photos } from '../data'
 import Modal from './Modal'
-import { ChevronIcon, DownloadIcon } from './Icons'
+import { ChevronIcon } from './Icons'
 
 const Html = ({ as: Tag = 'span', html, ...rest }) => (
   <Tag {...rest} dangerouslySetInnerHTML={{ __html: html }} />
@@ -36,7 +36,7 @@ const Chips = ({ items, small }) => (
 
 export function AboutCard() {
   return (
-    <article className="card wobble-a">
+    <article className="card tint-green wobble-a">
       <CardTitle num="01">About</CardTitle>
       <Html as="p" className="about-lead" html={about.lead} />
       <p className="muted-p">{about.sub}</p>
@@ -115,13 +115,20 @@ export function ExperienceCard() {
 export function ProjectsCard() {
   const [open, setOpen] = useState(false)
   return (
-    <article className="card wobble-c">
+    <article className="card tint-green wobble-c">
       <CardTitle num="03">Projects</CardTitle>
       <div className="proj-list">
         {projects.map((p, i) => (
-          <div key={p.name} className={`proj ${p.comingSoon ? 'proj-soon' : ''} ${i % 2 ? 'wobble-sm-b' : 'wobble-sm'}`}>
-            <span className="proj-name">{p.name}</span>
-            <span className="proj-date">{p.comingSoon ? 'Coming soon' : p.dates}</span>
+          <div key={p.name} className={`proj ${p.comingSoon ? 'proj-soon' : 'proj-main'} ${i % 2 ? 'wobble-sm-b' : 'wobble-sm'}`}>
+            <span className="proj-row">
+              <span className="proj-name">{p.name}</span>
+              {!p.comingSoon && <span className="proj-date">{p.dates}</span>}
+            </span>
+            {p.comingSoon ? (
+              <span className="proj-date">Coming soon</span>
+            ) : (
+              <span className="proj-tagline">{p.tagline}</span>
+            )}
           </div>
         ))}
       </div>
@@ -139,6 +146,11 @@ export function ProjectsCard() {
               <h3 className="proj-modal-name">{p.fullName}</h3>
               {!p.comingSoon && <span className="pill">{p.dates}</span>}
             </div>
+            {p.link && (
+              <a className="open-link" href={p.link} target="_blank" rel="noopener noreferrer">
+                Open app ↗
+              </a>
+            )}
             {p.comingSoon ? (
               <span className="soon">Coming soon. Stay tuned!</span>
             ) : (
@@ -187,24 +199,61 @@ export function PhotoCard() {
   )
 }
 
-export function ContactCard() {
+export function SmallProjectsCard() {
+  const [open, setOpen] = useState(false)
   return (
-    <article className="card contact-card wobble-a">
-      <CardTitle num="04" plain>Contact</CardTitle>
-      <p className="contact-big">Let's build something together.</p>
-      <p className="contact-email">
-        <a href={`mailto:${links.email}`}>{links.email}</a>
-      </p>
-      <div className="contact-btns">
-        <a className="btn btn-dark wobble-sm" href={`mailto:${links.email}`}>Email me</a>
-        <a className="btn btn-dark wobble-sm-b" href={links.resume} download={links.resumeFileName} target="_blank" rel="noopener">
-          <DownloadIcon size={16} />
-          Resume
-        </a>
-        <a className="btn wobble-sm-b" href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a className="btn wobble-sm" href={links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a className="btn wobble-sm-b" href={links.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+    <article className="card tint-green wobble-a">
+      <CardTitle num="04" plain>Small Projects</CardTitle>
+      <div className="proj-list">
+        {smallProjects.map((p, i) => (
+          <a
+            key={p.name}
+            className={`proj proj-main small-proj ${i % 2 ? 'wobble-sm-b' : 'wobble-sm'}`}
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="proj-row">
+              <span className="proj-name">{p.name}</span>
+              <span className="open-mini">Open ↗</span>
+            </span>
+            <span className="proj-tagline">{p.tagline}</span>
+            <span className="chips mini">
+              {p.langs.map((l) => (
+                <span key={l} className="chip chip-xs">{l}</span>
+              ))}
+            </span>
+          </a>
+        ))}
       </div>
+      <button type="button" className="read-more ink" onClick={() => setOpen(true)}>
+        <span>Read more →</span>
+      </button>
+
+      <Modal open={open} onClose={() => setOpen(false)} labelledBy="small-title">
+        <div className="modal-head">
+          <span className="card-num">04 · Small Projects</span>
+          <h2 id="small-title" className="hl modal-h">Small Projects</h2>
+          <p className="muted-p">Quick apps I built for people around me. Both are live, so give them a try.</p>
+        </div>
+        {smallProjects.map((p) => (
+          <section key={p.name} className="modal-sec ruled">
+            <div className="proj-modal-head">
+              <h3 className="proj-modal-name">{p.fullName}</h3>
+              <a className="open-link" href={p.link} target="_blank" rel="noopener noreferrer">
+                {p.linkLabel}
+              </a>
+            </div>
+            <p className="muted-p">{p.summary}</p>
+            <ul className="bullets">
+              {p.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+            <Chips items={p.stack} small />
+          </section>
+        ))}
+      </Modal>
     </article>
   )
 }

@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import { AboutCard, ExperienceCard, ProjectsCard, PhotoCard, ContactCard, SkillsCard } from './components/Cards'
+import { AboutCard, ExperienceCard, ProjectsCard, PhotoCard, SmallProjectsCard, SkillsCard } from './components/Cards'
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
         <ExperienceCard />
         <ProjectsCard />
         <PhotoCard />
-        <ContactCard />
+        <SmallProjectsCard />
         <SkillsCard />
       </main>
     </div>

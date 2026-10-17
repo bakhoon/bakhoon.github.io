@@ -44,6 +44,22 @@ export const experience = {
 
 export const projects = [
   {
+    name: '한eng AI Record',
+    fullName: '한eng AI Record',
+    dates: 'Jul 2026 to Now',
+    tagline: 'Live Korean + English captions with AI summaries',
+    link: 'https://bakhoon.github.io/ai-audio-capture/',
+    summary:
+      "A live caption web app for my small-group meetings, where Korean and English are mixed. I've been building it for about three months.",
+    bullets: [
+      'Real-time Korean and English speech-to-text with Soniox, with Korean translations added under English lines as people talk',
+      'Claude summarizes the conversation every 2 minutes, and the summaries plus the full transcript auto-save to one Google Drive file',
+      'No server: API keys live only on my phone, so nobody else can use them, and it installs to the home screen like an app',
+      'Builds and deploys to GitHub Pages with GitHub Actions',
+    ],
+    stack: ['React', 'JavaScript', 'Vite', 'Soniox STT', 'Claude API', 'Google Drive API', 'GitHub Actions'],
+  },
+  {
     name: '예수원 Church Homepage',
     fullName: '예수원 Church Homepage',
     comingSoon: true,
@@ -52,6 +68,41 @@ export const projects = [
     name: 'Writer Blog',
     fullName: 'Writer Blog',
     comingSoon: true,
+  },
+]
+
+export const smallProjects = [
+  {
+    name: '큰 글씨 성경',
+    fullName: '큰 글씨 성경 · Large-Print Bible',
+    tagline: 'Large-print Bible app for people with low vision',
+    link: 'https://bakhoon.github.io/huge-bible/',
+    linkLabel: 'Open app ↗',
+    summary: 'A Bible web app for people with low vision, built around big text and big buttons.',
+    bullets: [
+      'Reading screen with the buttons always at the bottom: previous chapter, smaller, bigger, next chapter',
+      'Read-aloud with the Web Speech API, highlighting the verse being read',
+      '5 text sizes (28 to 56pt), light, dark, and high-contrast themes, 7:1 contrast, and screen reader labels on every button',
+      'Installs as a PWA and works offline',
+    ],
+    langs: ['React', 'TypeScript', 'PWA'],
+    stack: ['React', 'TypeScript', 'Vite', 'PWA', 'Web Speech API'],
+  },
+  {
+    name: 'Crayon Ladder Game',
+    fullName: 'Crayon Ladder Game · 사다리타기',
+    tagline: '사다리타기 you draw yourself, crayon style',
+    link: 'https://bakhoon.github.io/ladder-luck-game/',
+    linkLabel: 'Play ↗',
+    summary: 'A ladder luck game with a crayon look, where you draw the ladder yourself.',
+    bullets: [
+      'Pick 2 to 10 players and how many "busts" there are',
+      'Drag with a crayon to draw rungs, tap to erase, or hit Random',
+      'Tap a player and watch them climb down the ladder you drew; results shuffle every round',
+      'Builds and deploys to GitHub Pages with GitHub Actions',
+    ],
+    langs: ['React', 'JavaScript', 'Vite'],
+    stack: ['React', 'JavaScript', 'Vite', 'GitHub Actions'],
   },
 ]
 
