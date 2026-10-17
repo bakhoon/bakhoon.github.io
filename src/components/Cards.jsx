@@ -147,7 +147,7 @@ export function ProjectsCard() {
         <div className="modal-head">
           <span className="card-num">03 · Projects</span>
           <h2 id="proj-title" className="hl modal-h">Side Projects</h2>
-          <p className="muted-p">Things I build outside of work, mostly for my church community.</p>
+          <p className="muted-p">Things I build outside of work, mostly for my church community. I build them with Claude as my pair programmer.</p>
         </div>
         {projects.map((p) => (
           <section key={p.name} className="modal-sec ruled">
@@ -243,7 +243,7 @@ export function SmallProjectsCard() {
         <div className="modal-head">
           <span className="card-num">04 · Small Projects</span>
           <h2 id="small-title" className="hl modal-h">Small Projects</h2>
-          <p className="muted-p">Quick apps I built for myself and the people around me. All of them are live, so give them a try.</p>
+          <p className="muted-p">Quick apps I built for myself and the people around me, with Claude as my pair programmer. All of them are live, so give them a try.</p>
         </div>
         {smallProjects.map((p) => (
           <section key={p.name} className="modal-sec ruled">
